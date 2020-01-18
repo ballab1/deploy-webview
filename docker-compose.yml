@@ -1,0 +1,15 @@
+version: '3.5'
+
+# https://hub.docker.com/r/sourcelaborg/kafka-webview
+# docker run -it -p 8080:8080 -v kafkawebview_data:/app/data sourcelaborg/kafka-webview:latest
+# login using admin@example.com with password admin
+
+services:
+  kafka-webview:
+    container_name: kafka-webview
+    image: sourcelaborg/kafka-webview
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+
